@@ -4,6 +4,7 @@ description: Flutter plugin for Google Sign-In, a secure authentication system
 repository: https://github.com/flutter/plugins/tree/master/packages/google_sign_in/google_sign_in
 issue_tracker: https://github.com/flutter/flutter/issues?q=is%3Aissue+is%3Aopen+label%3A%22p%3A+google_sign_in%22
 version: 5.0.4
+publish_to: none
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
@@ -23,8 +24,16 @@ flutter:
 dependencies:
   flutter:
     sdk: flutter
-  google_sign_in_platform_interface: ^2.0.1
-  google_sign_in_web: ^0.10.0
+  google_sign_in_platform_interface:
+    git:
+      url: https://github.com/serverpod/plugins.git
+      path: packages/google_sign_in/google_sign_in_platform_interface
+      ref: serverpod
+  google_sign_in_web:
+    git:
+      url: https://github.com/serverpod/plugins.git
+      path: packages/google_sign_in/google_sign_in_web
+      ref: serverpod
   meta: ^1.3.0
 
 dev_dependencies:
